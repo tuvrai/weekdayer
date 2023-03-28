@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Weekday'er</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='weekdayer.css'>
+    <script src='weekdayer.js'></script>
+</head>
+<body>
+    <div id="weekdayer" class="weekdayer-part">
+        <div id = "wdr-controls">
+            <input type="radio" id="limit-mode-time-input" name="limit_mode">
+            <label for="html">Time limit</label><br>
+            <div id = "time-limit-controls">
+                <input type="number" class="time-limit-input minutes-input" min="0" max="120" value="0"> min
+                <input type="number" class="time-limit-input seconds-input" min="0" max="59" value="0"> sec
+                <p class="time-limit-countdown-text">time</p>
+            </div>
+            <input checked="true" type="radio" id="limit-mode-try-input" name="limit_mode">
+            <label for="html">Try limit</label><br>
+            <div id ="try-limit-controls">
+                <input type="number" class="try-limit-input" min="1" max="100" value="50"> tries
+            </div>
+            <button id = "start-session-btn" type="button">Start</button>
+        </div>
+        <div>
+            <span id = "wdr-tries-count"></span>
+            <span>&#47;</span>
+            <span id = "wdr-tries-max"></span>
+        </div>
+        <div id = "wdr-day">
+            <p id = "random-date-text"></p>
+            <div id="wdr-select-day">
+                <button class="confirm-weekday" type="button" value="0">Sun</button>
+                <button class="confirm-weekday" type="button" value="1">Mon</button>
+                <button class="confirm-weekday" type="button" value="2">Tue</button>
+                <button class="confirm-weekday" type="button" value="3">Wed</button>
+                <button class="confirm-weekday" type="button" value="4">Thu</button>
+                <button class="confirm-weekday" type="button" value="5">Fri</button>
+                <button class="confirm-weekday" type="button" value="6">Sat</button>
+            </div>
+        </div>
+    </div>
+    <div id="weekdayer-list" class="weekdayer-part">
+        <table id = "guesses-list-table">
+            <tr class="guess-list-header-row">
+                <th>Id</th>
+                <th>Date</th>
+                <th>Real</th>
+                <th>Guessed</th>
+                <th>Time elapsed [s]</th>
+            </tr>
+        </table>
+    </div>
+    <div id="weekdayer-stats" class="weekdayer-part">
+        <p class="weekdayer-stat-correct"><span class="label">Correct:&nbsp;</span><span id="stat-correct-value"></span></p>
+        <p class="weekdayer-stat-wrong"><span class="label">Wrong:&nbsp;</span><span id="stat-wrong-value"></span></p>
+        <p class="weekdayer-stat-efficiency"><span class="label">Efficiency:&nbsp;</span><span id="stat-efficiency-value"></span></p>
+        <p class="weekdayer-stat-time_elapsed"><span class="label">Time elapsed:&nbsp;</span><span id="stat-timeelapsed-value"></span></p>
+        <p class="weekdayer-stat-avg_calc_time"><span class="label">Average time:&nbsp;</span><span id="stat-avgtime-value"></span></p>
+    </div>
+</body>
+</html>

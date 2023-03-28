@@ -1,0 +1,29 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p#random-date-text{
+    font-size: 2.5em;
+}
+
+.weekdayer-part
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#guesses-list-table th,td,tr{
+    border:1px solid black;
+}
+
+#wdr-select-day {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.confirm-weekday{
+    visibility: collapse;
+}
